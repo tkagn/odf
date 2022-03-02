@@ -1,0 +1,24 @@
+apiVersion: ocs.openshift.io/v1
+kind: StorageCluster
+metadata:
+  name: odf-storagecluster
+  namespace: openshift-storage
+spec:
+  externalStorage: {}
+  storageDeviceSets:
+    - config: {}
+      count: 1 
+      dataPVCTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: "500Gi"
+          storageClassName: localblock
+          volumeMode: Block
+      name: odf-deviceset
+      placement: {}
+      portable: true
+      replica: 3
+      resources: {}
