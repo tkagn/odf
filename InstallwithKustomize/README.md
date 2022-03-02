@@ -121,6 +121,13 @@ oc apply -k . -o yaml --dry-run=client
 
 Review output and verify what will be added to the cluster.
 
+## Applying Manifest to Cluster
+
+```bash
+oc apply -k .
+```
+
 ## References
 
 [Product Documentation for Red Hat OpenShift Data Foundation 4.9](https://access.redhat.com/documentation/en-us/red_hat_openshift_data_foundation/4.9)
+[Kubernetes native configuration management](https://kustomize.io/)
